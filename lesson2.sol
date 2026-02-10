@@ -18,7 +18,7 @@ contract Owner {
         isPaused = paused;
     }
 
-    function getGreeting() external view returns (string) {
+    function getGreeting() external view returns (string memory) {
         require(!isPaused, "Contract is paused");
         return "Hello, World!";
     }
